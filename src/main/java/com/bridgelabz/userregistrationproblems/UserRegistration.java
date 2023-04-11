@@ -7,13 +7,13 @@ import java.util.regex.Pattern;
 public class UserRegistration {
 
 	public static void main(String[] args) {
-		String mobileNumberRegex = "^[0-9]{2} [0-9]{10}$";
-		System.out.println("Enter Email: ");
+		String passwordRegex = "^.{8,}";
+		System.out.println("Enter Password: ");
 		Scanner scanner = new Scanner(System.in);
-		String mobileNumber = scanner.nextLine();
+		String password = scanner.nextLine();
 
-		Pattern pattern = Pattern.compile(mobileNumberRegex);
-		Matcher matcher = pattern.matcher(mobileNumber);
+		Pattern pattern = Pattern.compile(passwordRegex);
+		Matcher matcher = pattern.matcher(password);
 		boolean result = matcher.matches();
 
 		if (result) {
@@ -23,4 +23,5 @@ public class UserRegistration {
 		}
 
 	}
+
 }
