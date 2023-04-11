@@ -8,13 +8,13 @@ public class UserRegistration {
 
 	public static void main(String[] args) {
 
-		String firstNameRegex = "^([A-Z][a-z]{3,})*$";
-		System.out.println("Enter first name: ");
+		String lastNameRegex = "^([A-Z][a-zA-Z]{3,})$";
+		System.out.println("Enter last name: ");
 		Scanner scanner = new Scanner(System.in);
-		String firstName = scanner.nextLine();
+		String lastName = scanner.nextLine();
 
-		Pattern pattern = Pattern.compile(firstNameRegex);
-		Matcher matcher = pattern.matcher(firstName);
+		Pattern pattern = Pattern.compile(lastNameRegex);
+		Matcher matcher = pattern.matcher(lastName);
 		boolean result = matcher.matches();
 
 		if (result) {
