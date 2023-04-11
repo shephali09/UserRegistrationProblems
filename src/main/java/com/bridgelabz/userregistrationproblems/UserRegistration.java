@@ -7,14 +7,13 @@ import java.util.regex.Pattern;
 public class UserRegistration {
 
 	public static void main(String[] args) {
-
-		String emailRegex = "^[a-zA-Z0-9]+([._+-][a-zA-Z0-9]+)*@[a-zA-Z0-9]+(\\.[a-zA-Z]{2,}){1,2}$";
+		String mobileNumberRegex = "^[0-9]{2} [0-9]{10}$";
 		System.out.println("Enter Email: ");
 		Scanner scanner = new Scanner(System.in);
-		String email = scanner.nextLine();
+		String mobileNumber = scanner.nextLine();
 
-		Pattern pattern = Pattern.compile(emailRegex);
-		Matcher matcher = pattern.matcher(email);
+		Pattern pattern = Pattern.compile(mobileNumberRegex);
+		Matcher matcher = pattern.matcher(mobileNumber);
 		boolean result = matcher.matches();
 
 		if (result) {
@@ -24,5 +23,4 @@ public class UserRegistration {
 		}
 
 	}
-
 }
