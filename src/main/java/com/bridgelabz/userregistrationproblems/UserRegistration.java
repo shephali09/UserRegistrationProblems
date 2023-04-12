@@ -8,12 +8,12 @@ public class UserRegistration {
 
 	public static void main(String[] args) {
 
-		String passwordRegex = "^(?=.*[A-Z])(?=.*[0-9]).{8,}$";
-		System.out.println("Enter Password: ");
 		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter password: ");
 		String password = scanner.nextLine();
 
-		Pattern pattern = Pattern.compile(passwordRegex);
+		String regex = "^(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&+=]).{8,}$";
+		Pattern pattern = Pattern.compile(regex);
 		Matcher matcher = pattern.matcher(password);
 		boolean result = matcher.matches();
 
