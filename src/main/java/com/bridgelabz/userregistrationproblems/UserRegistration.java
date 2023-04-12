@@ -8,13 +8,13 @@ public class UserRegistration {
 
 	public static void main(String[] args) {
 
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("Enter password: ");
-		String password = scanner.nextLine();
+		String emailRegex = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
+		System.out.println("Enter the email: ");
+		Scanner sc = new Scanner(System.in);
+		String email = sc.nextLine();
 
-		String regex = "^(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&+=]).{8,}$";
-		Pattern pattern = Pattern.compile(regex);
-		Matcher matcher = pattern.matcher(password);
+		Pattern pattern = Pattern.compile(emailRegex);
+		Matcher matcher = pattern.matcher(email);
 		boolean result = matcher.matches();
 
 		if (result) {
