@@ -12,63 +12,63 @@ public class UserRegistrationTest {
 
 	@Test
 	public void isValidFirstNameForPassedTestCase() {
-		result = userregistration.validateFirstName("Shephali");
+		result = userregistration.validateFirstName.test("Shephali");
 		Assert.assertEquals(true, result);
 
 	}
 
 	@Test
 	public void isValidFirstNameForFailedTestCase() {
-		result = userregistration.validateFirstName("df");
+		result = userregistration.validateFirstName.test("df");
 		Assert.assertEquals(true, result);
 
 	}
 
 	@Test
 	public void isvalidLastNameForPassedTestCase() {
-		result = userregistration.validateLastName("Hiremath");
+		result = userregistration.validateLastName.test("Hiremath");
 		Assert.assertEquals(true, result);
 	}
 
 	@Test
 	public void isvalidLastNameForFailedTestCase() {
-		result = userregistration.validateLastName("sd");
+		result = userregistration.validateLastName.test("sd");
 		Assert.assertEquals(true, result);
 	}
 
 	@Test
 	public void isValidEmailForPassesTestCase() {
-		result = userregistration.validateEmail("hiremaths34@gmail.com");
+		result = userregistration.validateEmail.test("hiremaths34@gmail.com");
 		Assert.assertEquals(true, result);
 	}
 
 	@Test
 	public void isValidEmailForFailedTestCase() {
-		result = userregistration.validateEmail("abc..22@gmail.com");
+		result = userregistration.validateEmail.test("abc..22@gmail.com");
 		Assert.assertEquals(true, result);
 	}
 
 	@Test
 	public void isVAlidMobileNumberForPassedTestCase() {
-		result = userregistration.validatePhoneNumber("91 8329596787");
+		result = userregistration.validatePhoneNumber.test("91 8329596787");
 		Assert.assertEquals(true, result);
 	}
 
 	@Test
 	public void isVAlidMobileNumberForFailedTestCase() {
-		result = userregistration.validatePhoneNumber("9 8396787");
+		result = userregistration.validatePhoneNumber.test("9 8396787");
 		Assert.assertEquals(true, result);
 	}
 
 	@Test
 	public void isValidPasswordForPassedTestCase() {
-		result = userregistration.validatePassword("A45$vbhn");
+		result = userregistration.validatePassword.test("A45$vbhn");
 		Assert.assertEquals(true, result);
 	}
 
 	@Test
 	public void isValidPasswordForFailedTestCase() {
-		result = userregistration.validatePassword("vgg");
+		result = userregistration.validatePassword.test("vgg");
 		Assert.assertEquals(true, result);
 	}
 
